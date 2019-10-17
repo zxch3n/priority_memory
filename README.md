@@ -2,12 +2,12 @@
 
 A prioritized sampling tool for priority memory replay.
 
-The implementation is based on sum tree, or segmentation tree.
+The implementation is based on sum tree, i.e. segmentation tree.
 
 - Set the priority of each sample at anytime. 
-- When you do not know the priority of the sample, you can append 
+- When you do not know the priorities of the samples, you can append 
   them to the buffer, and they will show up in the next sampling batch.
-- When the buffer is full, drop the samples with lowest priority.
+- When the buffer is full, it'll drop the samples with lowest priority.
 
 The time complexity for sampling a batch with batch size m 
 from a dataset with n samples is O(mlogn), for setting priority 
